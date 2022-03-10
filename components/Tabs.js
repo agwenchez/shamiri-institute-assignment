@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, FlatList, Dimensions, SafeAreaView, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
-const { width, height } = Dimensions.get('window')
+const { width, height } = Dimensions.get('screen')
 import { AntDesign } from '@expo/vector-icons';
 import Svg, { G, Circle } from "react-native-svg";
 import Constants from 'expo-constants'
@@ -17,23 +17,23 @@ const Daily = () => {
             <View style={styles.donutWrapper}>
 
                 <View style={{ justifyContent: "center", alignItems: "center", position: "absolute" }}>
-                    <Donut radius={60} color={"#143029"} />
+                    <Donut radius={60} color={"#143029"} percentage={40}/>
                     <Text style={styles.text}>50</Text>
                 </View>
 
                 <View style={{ justifyContent: "center", alignItems: "center", position: "absolute" }}>
-                    <Donut radius={70} color={"#85BDAF"} />
+                    <Donut radius={70} color={"#85BDAF"} percentage={70}/>
                 </View>
 
                 <View style={{ justifyContent: "center", alignItems: "center", position: "absolute" }}>
-                    <Donut radius={80} color={"#BCD9D1"} />
+                    <Donut radius={80} color={"#BCD9D1"} percentage={20}/>
                 </View>
                 <View style={{ justifyContent: "center", alignItems: "center", position: "absolute" }}>
-                    <Donut radius={90} color={"#E3A89F"} />
+                    <Donut radius={90} color={"#E3A89F"} percentage={60}/>
                 </View>
 
                 <View style={{ justifyContent: "center", alignItems: "center", position: "absolute" }}>
-                    <Donut radius={100} color={"#F6E9E7"} />
+                    <Donut radius={100} color={"#F6E9E7"} percentage={80}/>
                 </View>
             </View>
 
@@ -97,7 +97,7 @@ const Daily = () => {
 const Weekly = () => {
     return (
         <View style={{ width: width }} >
-            <View style={{ marginTop: 20, paddingHorizontal: 40 }} >
+            <View style={{ marginTop: 40, paddingHorizontal: 40 }} >
                 <Text style={{ textAlign: "left", fontWeight: 'bold', fontSize: 18 }} >Mental Health</Text>
             </View>
 
@@ -121,12 +121,12 @@ const Weekly = () => {
                 </View>
             </View>
 
-            <View style={{ marginHorizontal: 20 }}>
-                <BarChart height={height / 3.8} width={width * 0.8}/>
+            <View style={{ marginHorizontal: 20, marginTop:0 }}>
+                <BarChart height={height / 4.2} width={width * 0.8}/>
             </View>
 
-            <View style={{ backgroundColor: "#C4C4C4", height: 1.5, width: width, marginBottom: 30, marginTop: 20 }} ></View>
-            <Text style={{ textAlign: "left", fontWeight: 'bold', fontSize: 18, marginBottom:15, marginLeft:40 }} >Recommendation</Text>
+            <View style={{ backgroundColor: "#C4C4C4", height: 1.5, width: width, marginBottom: 10, marginTop: 10 }} ></View>
+            <Text style={{ textAlign: "left", fontWeight: 'bold', fontSize: 18, marginBottom:20, marginLeft:40 }} >Recommendation</Text>
             <Image
                 style={{ height: 160, width: width-60, borderTopRightRadius:10, borderTopLeftRadius:10,alignSelf:"center" }}
                 source={{
@@ -134,7 +134,7 @@ const Weekly = () => {
                 }}
             />
             <Text style={{ marginLeft:30, color:"gray" }} >One-on-One sessions</Text>
-            <Text style={{ marginLeft:30, marginBottom:-5 }} >Talk to our therapists about employee burnout</Text>
+            <Text style={{ marginLeft:30, marginBottom:0 }} >Talk to our therapists about employee burnout</Text>
         </View>
 
 

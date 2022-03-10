@@ -21,7 +21,7 @@ const PersonalDashboard = ({ navigation }) => {
             <View style={open ? { flex: 2.1, overflow: "hidden", borderBottomLeftRadius: 50, } : { flex: 0.65, overflow: "hidden", borderBottomLeftRadius: 50, }}>
                 <View style={{ flex: 1, backgroundColor: '#85BDAF', width: width, borderBottomLeftRadius: 60, paddingTop: Constants.statusBarHeight + 10, }}>
                     <Text style={{ color: "white", fontSize: 28, marginLeft: 40 }} >FOR YOU</Text>
-                    <Text style={{ color: "white", fontSize: 18, marginLeft: 40, }} >Jan 18 2022, Friday</Text>
+                    <Text style={{ color: "white", fontSize: 16, marginLeft: 40, }} >Jan 18 2022, Friday</Text>
 
                     <View style={open ? { backgroundColor: "radial-gradient(87.58% 209.18% at 6.09% 10.16%, rgba(188, 217, 209, 0.6) 0%, rgba(188, 217, 209, 0.6) 100%)", height: height * 0.48, width: width * 0.85, justifyContent: "center", alignSelf: "center", marginTop: 20, borderRadius: 15 } : { backgroundColor: "radial-gradient(87.58% 209.18% at 6.09% 10.16%, rgba(188, 217, 209, 0.6) 0%, rgba(188, 217, 209, 0.6) 100%)", height: height * 0.19, width: width * 0.85, justifyContent: "center", alignSelf: "center", marginTop: 20, borderRadius: 15 }}>
                         <View style={{ flexDirection: "row", justifyContent: "center", alignSelf: "center", }} >
@@ -233,23 +233,23 @@ const PersonalDashboard = ({ navigation }) => {
                         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
                             <View style={styles.donutWrapper}>
                                 <View style={{ position: "absolute", top: 40 }}>
-                                    <Donut radius={45} color={"#143029"} />
+                                    <Donut radius={45} color={"#143029"} percentage={40} />
                                     <Text style={styles.text}>50</Text>
                                 </View>
 
                                 <View style={{ position: "absolute", top: 30 }}>
-                                    <Donut radius={55} color={"#85BDAF"} />
+                                    <Donut radius={55} color={"#85BDAF"} percentage={70}/>
                                 </View>
 
                                 <View style={{ position: "absolute", top: 20 }}>
-                                    <Donut radius={65} color={"#BCD9D1"} />
+                                    <Donut radius={65} color={"#BCD9D1"} percentage={60}/>
                                 </View>
                                 <View style={{ position: "absolute", top: 10 }}>
-                                    <Donut radius={75} color={"#E3A89F"} />
+                                    <Donut radius={75} color={"#E3A89F"} percentage={20}/>
                                 </View>
 
                                 <View style={{ position: "absolute", top: 0 }}>
-                                    <Donut radius={85} color={"#F6E9E7"} />
+                                    <Donut radius={85} color={"#F6E9E7"} percentage={80}/>
                                 </View>
                             </View>
 

@@ -4,22 +4,24 @@ import { VictoryChart, VictoryGroup, VictoryBar, VictoryTheme } from 'victory-na
 
 
 const data = [
-    {x:"S", y:6}, 
-    {x:"M", y:7}, 
-    {x:"T", y:5},
-    {x:"W", y:8},
-    {x:"T", y:6},
-    {x:"F", y:7},
-    {x:"S", y:7}
+    {day:"S", output:6}, 
+    {day:"M", output:7}, 
+    {day:"T", output:5},
+    {day:"W", output:8},
+    {day:"T", output:6},
+    {day:"F", output:7},
+    {day:"S", output:7}
 ]
 
 const BarChart = ({height, width}) => {
   return (
-    <View>
-      <VictoryChart domainPadding={{ x: 20, }} height={height} width={width}  theme={VictoryTheme.material}>
+    <>
+      <VictoryChart domainPadding={{ x: 20, }} height={height} width={width} theme={VictoryTheme.material} >
           <VictoryGroup  >
               <VictoryBar 
                 data={data}
+                x="day"
+                y="output"
                 style={{
                     data:{
                         fill:"#F6E9E7"
@@ -39,10 +41,14 @@ const BarChart = ({height, width}) => {
               
           </VictoryGroup>
       </VictoryChart>
-    </View>
+    </>
   )
 }
 
 export default BarChart
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container:{
+        flex:1,
+    }
+})
